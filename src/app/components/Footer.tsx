@@ -3,23 +3,14 @@ export default function Footer() {
     <footer className=" max-w-[960px] mx-auto pb-12 pt-12">
       <div className="flex justify-between items-center">
         <p className="text-lg">Cole Morgan</p>
-        <div className="flex gap-5 text-sm">
-          <a href="" className="link__hover-effect">
-            Home
-          </a>
-          <a href="" className="link__hover-effect">
-            Projects
-          </a>
-          <a href="" className="link__hover-effect">
-            Experience
-          </a>
-          <a href="" className="link__hover-effect">
+        
+          <a href="https://github.com/colemmorgan/dev-portfolio" target="_blank" className="text-sm text-dull">
             Source Code
           </a>
-        </div>
+        
       </div>
       <div className="pt-10 flex justify-between items-center">
-        <p className="text-sm text-[#707070]">
+        <p className="text-sm text-dull">
           © {new Date().getFullYear()} Cole Morgan. All rights reserved.
         </p>
 

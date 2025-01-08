@@ -37,7 +37,7 @@ type Experience = {
 
 export default function Experience() {
   return (
-    <div className="max-w-[960px] mx-auto py-16 border-b border-gray-200">
+    <div className="max-w-[960px] mx-auto py-16 border-b border-gray-200" id="experience">
       <p className="text-dull tracking-wider font-medium text-lg">EXPERIENCE</p>
       <div className="text-sm">
         <div className="m mt-6 grid grid-cols-12 border-b border-gray-100 pb-3 text-dull">

@@ -8,10 +8,12 @@ body {
   color: #242424;
 }
 
-.experience-item {
+.experience-item, .award-item {
   transition: all 250ms ease;
 }
 
 .m {
   font-family: "Geist Mono", serif;
 }
+
+

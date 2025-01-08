@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <div className="max-w-[960px] mx-auto pt-16 pb-16 border-b border-gray-200">
+    <div className="max-w-[960px] mx-auto pt-16 pb-16 border-b border-gray-200" id="home">
       <div className="text-[36px] font-semibold leading-[1.32]">
         <h1 className="inline text-black">
           Hi! I'm Cole Morgan, a frontend-focused fullstack web developer @ the

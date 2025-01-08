@@ -1,3 +1,4 @@
+import Awards from "./components/Awards";
 import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -15,6 +16,7 @@ export default function Home() {
         <Experience />
         <Skills />
         <Projects/>
+        <Awards/>
         <Footer />
       </div>
     </div>
