@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: #242424;
+}
+
+.experience-item {
+  transition: all 250ms ease;
+}
+
+.m {
+  font-family: "Geist Mono", serif;
+}
