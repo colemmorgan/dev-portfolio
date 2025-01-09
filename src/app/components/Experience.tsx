@@ -114,7 +114,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ exp }) => {
           </p>
           <p className="flex justify-between items-center pt-4 text-dull text-sm gap-3">
             <span className="whitespace-nowrap">{exp.organization}</span>
-            <span className="flex items-end gap-1.5 text-xs">
+            <span className="flex justify-end text-[11px]">
               Click to {isOpen ? "collapse" : "expand"}.
             </span>
           </p>

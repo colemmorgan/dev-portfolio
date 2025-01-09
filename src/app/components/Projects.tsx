@@ -39,12 +39,12 @@ export default function Projects() {
     <div className="max-w-[960px] mx-auto py-16 border-b border-gray-200" id="work">
       <h3 className="text-lg text-dull font-medium tracking-wider">WORK</h3>
 
-      <div className="mt-6 md:grid grid-cols-5 gap-6">
+      <div className="mt-6 md:grid grid-cols-5 gap-8">
         <figure className="col-span-3">
           <img src="/projects/spcb2.webp" alt="" className="w-full rounded-sm" />
         </figure>
         <div className="col-span-2 pt-5 md:pt-0">
-          <p className="text-lg sm:text-xl lg:text-2xl">
+          <p className="text-lg sm:text-xl xl:text-2xl">
             Custom Content Management System + Club Website
           </p>
           <p className="pt-1 md:pt-1.5 text-dull">
@@ -75,12 +75,12 @@ type ProjectProps = {
 
 const Project:React.FC<ProjectProps> = ({project}) => {
   return (
-    <div className="mt-16 md:mt-8 md:grid grid-cols-5 gap-6">
+    <div className="mt-16 md:mt-8 md:grid grid-cols-5 gap-6 xl:gap-8">
     <figure className="col-span-3">
       <img src={project.src} alt="" className="w-full rounded-sm" />
     </figure>
     <div className="col-span-2 pt-5 md:pt-0">
-      <p className="text-lg sm:text-xl lg:text-2xl">{project.title}</p>
+      <p className="text-lg sm:text-xl xl:text-2xl">{project.title}</p>
       <p className="pt-1 sm:pt-1.5 text-dull">
         {project.desc}
       </p>

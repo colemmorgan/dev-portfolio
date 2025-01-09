@@ -78,7 +78,7 @@ export default function Skills() {
         ))}
       </div>
 
-      <div className="mt-6 sm:mt-5 lg:max-h-[42px] overflow-hidden">
+      <div className="mt-6 sm:mt-5 xl:max-h-[42px] overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
