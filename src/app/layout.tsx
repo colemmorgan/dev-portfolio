@@ -32,6 +32,33 @@ export const metadata: Metadata = {
     },
   },
 
+
+  openGraph: {
+    images: {
+      url: '/preview.png',
+      width: 1400,
+      height: 900,
+      alt: 'Cole Morgan - Web Developer'
+    },
+    type: 'website',
+    locale: 'en_US',
+    title: 'Cole Morgan | Web Developer',
+    description: 'Cole Morgan is a frontend-focused full-stack web developer at the University of Florida.',
+  },
+  
+  // Twitter
+  twitter: {
+    card: 'summary_large_image',
+    images: {
+      url: '/preview.png',
+      width: 1400,
+      height: 900,
+      alt: 'Cole Morgan - Web Developer'
+    },
+    title: 'Cole Morgan | Web Developer',
+    description: 'Cole Morgan is a frontend-focused full-stack web developer at the University of Florida.',
+  },
+  
   manifest: '/site.webmanifest',
 }
 
