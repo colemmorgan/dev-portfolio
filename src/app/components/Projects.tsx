@@ -1,5 +1,3 @@
-import React from "react";
-
 type Project = {
   src:string;
   title: string;
@@ -94,14 +92,14 @@ const Project:React.FC<ProjectProps> = ({project}) => {
       <div className="pt-4 flex gap-2">
         <a
           href={project.liveLink}
-          className="bg-black text-white text-sm rounded-full px-4 py-1.5"
+          className="bg-black text-white text-sm rounded-full px-4 py-1.5 hover:bg-[#404040] transition-all"
           target="_blank"
         >
           Live Demo
         </a>
         <a
           href={project.githubLink}
-          className="bg-gray-200 text-black text-sm rounded-full px-4 py-1.5"
+          className="bg-gray-200 text-black text-sm rounded-full px-4 py-1.5 hover:bg-gray-300"
           target="_blank"
         >
           Source Code

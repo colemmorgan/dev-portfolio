@@ -1,6 +1,7 @@
 "use client";
 import { AnimatePresence, easeOut, motion } from "framer-motion";
-import React, { useState } from "react";
+import Image from "next/image";
+import { useState } from "react";
 import { FaMapPin } from "react-icons/fa";
 import { FaBars, FaXmark } from "react-icons/fa6";
 
@@ -12,10 +13,12 @@ export default function Navbar() {
       <div className="hidden lg:block w-[232px] border-r border-gray-200 h-screen py-6 ">
         <div className="border-b border-gray-200 px-5 pb-6">
           <figure>
-            <img
+            <Image
+              height={56}
+              width={56}
               src="/me.jpg"
               alt=""
-              className="w-14 h-14 rounded-full grayscale"
+              className="rounded-full grayscale"
             />
           </figure>
           <p className="pt-2.5 text-lg">Cole Morgan</p>
@@ -92,7 +95,7 @@ export default function Navbar() {
       </div>
       <div className="lg:hidden fixed z-10 px-6 md:px-8 w-full border-b border-gray-200 py-4 flex items-center justify-between bg-white">
         <figure>
-          <img src="/favicon.png" alt="" className="w-9 h-9" />
+          <Image src="/favicon.png" alt="" width={36} height={36} />
         </figure>
         <button className="text-2xl" onClick={() => setShowMobileNav(true)}>
           <FaBars />
@@ -124,10 +127,12 @@ export default function Navbar() {
               </span>
               <div className="pt-2">
                 <figure>
-                  <img
+                  <Image
+                    height={64}
+                    width={64}
                     src="/me.jpg"
                     alt=""
-                    className="w-16 h-16 grayscale rounded-full"
+                    className="grayscale rounded-full"
                   />
                 </figure>
                 <p className="text-lg pt-2">Cole Morgan</p>
@@ -135,7 +140,11 @@ export default function Navbar() {
                   <FaMapPin /> University of Florida
                 </p>
                 <div className="grid mt-4 gap-4 border-y py-4">
-                  <a href="mailto:colemmorgann@gmail.com" target="_blank" onClick={() => setShowMobileNav(false)}>
+                  <a
+                    href="mailto:colemmorgann@gmail.com"
+                    target="_blank"
+                    onClick={() => setShowMobileNav(false)}
+                  >
                     Email
                   </a>
                   <a
@@ -145,7 +154,11 @@ export default function Navbar() {
                   >
                     LinkedIn
                   </a>
-                  <a href="https://github.com/colemmorgan" target="_blank" onClick={() => setShowMobileNav(false)}>
+                  <a
+                    href="https://github.com/colemmorgan"
+                    target="_blank"
+                    onClick={() => setShowMobileNav(false)}
+                  >
                     GitHub
                   </a>
                   <a
@@ -158,10 +171,18 @@ export default function Navbar() {
                   </a>
                 </div>
                 <div className="grid gap-4 border-b py-4">
-                  <a href="#home" onClick={() => setShowMobileNav(false)}>Home</a>
-                  <a href="#experience" onClick={() => setShowMobileNav(false)}>Experience</a>
-                  <a href="#work" onClick={() => setShowMobileNav(false)}>Work</a>
-                  <a href="#awards" onClick={() => setShowMobileNav(false)}>Awards</a>
+                  <a href="#home" onClick={() => setShowMobileNav(false)}>
+                    Home
+                  </a>
+                  <a href="#experience" onClick={() => setShowMobileNav(false)}>
+                    Experience
+                  </a>
+                  <a href="#work" onClick={() => setShowMobileNav(false)}>
+                    Work
+                  </a>
+                  <a href="#awards" onClick={() => setShowMobileNav(false)}>
+                    Awards
+                  </a>
                 </div>
               </div>
             </motion.div>

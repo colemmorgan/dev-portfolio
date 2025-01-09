@@ -13,7 +13,6 @@ import {
 } from "react-icons/si";
 import {
   TbBrandMongodb,
-  TbBrandPrisma,
   TbBrandThreejs,
   TbBrandTypescript,
 } from "react-icons/tb";
@@ -68,7 +67,7 @@ export default function Skills() {
             className={`px-4 transition-all rounded-full py-1 text-sm ${
               activeTab === tab
                 ? "bg-black text-white"
-                : "hover:bg-gray-700 hover:bg-opacity-25 bg-gray-200"
+                : "hover:bg-gray-300 bg-gray-200"
             }`}
             onClick={() =>
               handleTabChange(tab as "frontend" | "backend" | "design")

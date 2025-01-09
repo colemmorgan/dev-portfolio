@@ -1,7 +1,6 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
-import { FaChevronDown } from "react-icons/fa";
 
 const experience = [
   {
@@ -95,7 +94,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ exp }) => {
               </div>
               <div className="flex flex-wrap gap-2 pb-6">
                 {exp.tags.map((tag) => (
-                  <span className="text-black bg-gray-200 py-1 px-4 rounded-full text-sm">
+                  <span className="text-black bg-gray-200 py-1 px-4 rounded-full text-sm" key={tag}>
                     {tag}
                   </span>
                 ))}
@@ -134,7 +133,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ exp }) => {
               </div>
               <div className="flex flex-wrap gap-2 pb-3">
                 {exp.tags.map((tag) => (
-                  <span className="text-black bg-gray-200 py-1 px-4 rounded-full text-xs">
+                  <span className="text-black bg-gray-200 py-1 px-4 rounded-full text-xs" key={tag}>
                     {tag}
                   </span>
                 ))}

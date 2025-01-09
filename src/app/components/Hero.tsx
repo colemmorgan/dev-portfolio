@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Hero() {
   return (
     <div
@@ -8,7 +6,7 @@ export default function Hero() {
     >
       <div className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-normal lg:leading-[1.32]">
         <h1 className="inline text-black">
-          Hi! I'm Cole Morgan, a frontend-focused full-stack web developer @ the
+          Hi! I&apos;m Cole Morgan, a frontend-focused full-stack web developer @ the
           University of Florida.
         </h1>
         <h2 className="inline text-dull">
@@ -20,9 +18,10 @@ export default function Hero() {
       <a
         href="mailto:colemmorgann@gmail.com"
         target="_blank"
+        rel="noopener noreferrer"
         className="text-sm sm:text-base mt-8 bg-gray-100 border border-gray-300 rounded-full py-2.5 px-8 inline-block font-medium shadow-sm cursor-pointer hover:shadow-md transition-all"
       >
-        Let's get in touch!{" "}
+        Let&apos;s get in touch!{" "}
         <svg
           width="20"
           height="20"

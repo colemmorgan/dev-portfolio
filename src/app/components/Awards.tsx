@@ -1,5 +1,5 @@
-"use client"
-
+"use client";
+import Image from "next/image";
 import { useState } from "react";
 
 type award = {
@@ -9,9 +9,21 @@ type award = {
 };
 
 const awards: award[] = [
-  { desc: "MediHacks 2024 Hackathon Winner", year: "2024", href: "https://devpost.com/software/fulfillment" },
-  { desc: "Nurturing Gator Unity Hackathon Winner", year: "2024",  href: "https://devpost.com/software/access-for-all-ymhp6n"},
-  { desc: "KatyYouthHacks Hackathon Winner", year: "2024",  href: "https://devpost.com/software/chroma-qmc9ti"},
+  {
+    desc: "MediHacks 2024 Hackathon Winner",
+    year: "2024",
+    href: "https://devpost.com/software/fulfillment",
+  },
+  {
+    desc: "Nurturing Gator Unity Hackathon Winner",
+    year: "2024",
+    href: "https://devpost.com/software/access-for-all-ymhp6n",
+  },
+  {
+    desc: "KatyYouthHacks Hackathon Winner",
+    year: "2024",
+    href: "https://devpost.com/software/chroma-qmc9ti",
+  },
 ];
 
 export default function Awards() {
@@ -37,39 +49,44 @@ type AwardProps = {
 };
 
 const Award: React.FC<AwardProps> = ({ award }) => {
-    const [isHovered, setIsHovered] = useState(false);
-    const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  
-    const handleMouseMove = (e: React.MouseEvent) => {
-      const rect = e.currentTarget.getBoundingClientRect();
-      setMousePos({
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top
-      });
-    };
-  
-    return (
-      <a 
-      href={award.href} target="_blank"
-        className="grid grid-cols-6 py-3 border-b border-gray-100 text-sm relative sm:cursor-none cursor-default hover:bg-gray-100 award-item hover:px-3"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        onMouseMove={handleMouseMove}
-      >
-        {isHovered && (
-          <img
-            src="/mouse.svg"
-            alt=""
-            className="hidden sm:block absolute w-7 h-7 pointer-events-none"
-            style={{
-              left: `${mousePos.x}px`,
-              top: `${mousePos.y}px`,
-              transform: 'translate(-50%, -50%)'
-            }}
-          />
-        )}
-        <p className="text-xs sm:text-sm col-span-5">{award.desc}</p>
-        <p className="text-xs sm:text-sm col-span-1 flex justify-end">{award.year}</p>
-      </a>
-    );
+  const [isHovered, setIsHovered] = useState(false);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setMousePos({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
   };
+
+  return (
+    <a
+      href={award.href}
+      target="_blank"
+      className="grid grid-cols-6 py-3 border-b border-gray-100 text-sm relative sm:cursor-none cursor-default hover:bg-gray-100 award-item hover:px-3"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onMouseMove={handleMouseMove}
+    >
+      {isHovered && (
+        <Image
+          width={28}
+          height={28}
+          src="/mouse.svg"
+          alt=""
+          className="hidden sm:block absolute pointer-events-none"
+          style={{
+            left: `${mousePos.x}px`,
+            top: `${mousePos.y}px`,
+            transform: "translate(-50%, -50%)",
+          }}
+        />
+      )}
+      <p className="text-xs sm:text-sm col-span-5">{award.desc}</p>
+      <p className="text-xs sm:text-sm col-span-1 flex justify-end">
+        {award.year}
+      </p>
+    </a>
+  );
+};

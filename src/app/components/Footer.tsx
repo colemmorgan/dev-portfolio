@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className=" max-w-[960px] mx-auto pb-12 pt-12">
@@ -15,7 +17,7 @@ export default function Footer() {
         </p>
 
         <figure className="hidden sm:block">
-          <img src="/favicon.png" alt=""  className="h-9 w-9"/>
+          <Image src="/favicon.png" alt=""  height={36} width={36}/>
         </figure>
       </div>
     </footer>
