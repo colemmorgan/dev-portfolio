@@ -70,6 +70,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+      <meta property="og:image" content={`https://colemorgan.me/preview.png`} />
+        <meta property="og:image:width" content="1400" />
+        <meta property="og:image:height" content="900" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.png" type="image/png" />
       </head>
       <body className={inter.className}>{children}</body>
