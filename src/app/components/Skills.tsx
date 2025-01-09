@@ -31,7 +31,7 @@ export default function Skills() {
 
   const frontend = [
     { icon: <FaReact />, skill: "React" },
-    { icon: <RiNextjsFill />, skill: "Next.js" },
+    { icon: <RiNextjsFill />, skill: "Next" },
     { icon: <TbBrandTypescript />, skill: "TypeScript" },
     { icon: <RiTailwindCssFill />, skill: "Tailwind" },
     { icon: <TbBrandThreejs />, skill: "Three.js" },
@@ -79,11 +79,11 @@ export default function Skills() {
         ))}
       </div>
 
-      <div className="mt-5 max-h-[42px] overflow-hidden">
+      <div className="mt-6 sm:mt-5 lg:max-h-[42px] overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
-            className="flex gap-3"
+            className="flex flex-wrap gap-3"
             initial={isInitialRender ? false : "initial"}
             animate="animate"
             exit="exit"
@@ -112,8 +112,8 @@ type SkillProps = {
 
 const Skill: React.FC<SkillProps> = ({ icon, skill }) => {
   return (
-    <div className="bg-white border border-[#EaE8Ec] rounded-md px-6 py-2 flex items-center gap-2 hover:text-primary transition-all">
-      <span className="">{icon}</span>
+    <div className="bg-white border border-[#EaE8Ec] rounded-md px-4 sm:px-6 py-2 flex items-center gap-2 hover:text-primary transition-all">
+      <span className="sm:text-lg">{icon}</span>
       <p className="text-sm">{skill}</p>
     </div>
   );

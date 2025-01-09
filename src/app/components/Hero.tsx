@@ -2,19 +2,26 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <div className="max-w-[960px] mx-auto pt-16 pb-16 border-b border-gray-200" id="home">
-      <div className="text-[36px] font-semibold leading-[1.32]">
+    <div
+      className="max-w-[960px] mx-auto pt-28 md:pt-32 lg:pt-16 pb-16 border-b border-gray-200"
+      id="home"
+    >
+      <div className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-normal lg:leading-[1.32]">
         <h1 className="inline text-black">
-          Hi! I'm Cole Morgan, a frontend-focused fullstack web developer @ the
+          Hi! I'm Cole Morgan, a frontend-focused full-stack web developer @ the
           University of Florida.
         </h1>
         <h2 className="inline text-dull">
           {" "}
           I specialize in enhancing user experience through animation, 3D
-          graphics and attention to detail.
+          graphics, and attention to detail.
         </h2>
       </div>
-      <a className="mt-8 bg-gray-100 border border-gray-300 rounded-full py-2.5 px-8 inline-block font-medium shadow-sm cursor-pointer hover:shadow-md transition-all">
+      <a
+        href="mailto:colemmorgann@gmail.com"
+        target="_blank"
+        className="text-sm sm:text-base mt-8 bg-gray-100 border border-gray-300 rounded-full py-2.5 px-8 inline-block font-medium shadow-sm cursor-pointer hover:shadow-md transition-all"
+      >
         Let's get in touch!{" "}
         <svg
           width="20"

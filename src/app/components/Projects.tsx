@@ -1,128 +1,113 @@
 import React from "react";
 
+type Project = {
+  src:string;
+  title: string;
+  desc: string;
+  tech: string[];
+  liveLink: string;
+  githubLink: string
+}
+
+const projects: Project[] = [
+  {
+    src: "/projects/dsc.webp",
+    title: "Google DSC Landing Page",
+    tech: ["React", "TypeScript", "Figma", "Tailwind"],
+    desc: "Developed and designed a modern landing page for a student organization with micro-interactions using React & Framer Motion.",
+    liveLink: "https://ufdsc.org/",
+    githubLink: "https://github.com/colemmorgan/ufdsc",
+  },
+  {
+    src: "/projects/cc.webp",
+    title: "Coding Question Platform",
+    tech: ["React", "Recoil", "Docker", "Firebase", "Tailwind"],
+    desc: "A coding question platform with real-time grading and tracking through Firebase and containerized code execution.",
+    liveLink: "https://code-code-theta.vercel.app/",
+    githubLink: "https://github.com/colemmorgan/CodeCode",
+  },
+  {
+    src: "/projects/fufillment.webp",
+    title: "Medical Microcredentialing App",
+    tech: ["React", "Recoil", "TypeScript", "Firebase"],
+    desc: "A full-stack web app that rewards users for expanding their medical knowledge through live trivia, courses, and notecards.",
+    liveLink: "https://fufillment-n5cn.vercel.app/",
+    githubLink: "https://github.com/colemmorgan/Medihacks2024",
+  },
+];
+
 export default function Projects() {
   return (
     <div className="max-w-[960px] mx-auto py-16 border-b border-gray-200" id="work">
       <h3 className="text-lg text-dull font-medium tracking-wider">WORK</h3>
 
-      <div className="mt-6 grid grid-cols-5 gap-6">
+      <div className="mt-6 md:grid grid-cols-5 gap-6">
         <figure className="col-span-3">
           <img src="/projects/spcb2.webp" alt="" className="w-full rounded-sm" />
         </figure>
-        <div className="col-span-2">
-          <p className="text-2xl">
+        <div className="col-span-2 pt-5 md:pt-0">
+          <p className="text-lg sm:text-xl lg:text-2xl">
             Custom Content Management System + Club Website
           </p>
-          <p className="pt-2 text-dull">
-            Custom software and website for the Society of PC Building that
+          <p className="pt-1 md:pt-1.5 text-dull">
+            Software and website for the Society of PC Building that
             enables admins to update content on the client-side without code.
           </p>
-          <p className="pt-3 text-dull text-sm">
+          <p className="pt-2.5 text-dull text-sm">
             Tech: Next.js, TypeScipt, React, Firebase, Tailwind.
           </p>
-          <p className="pt-5">Coming January 2025</p>
+          <p className="pt-4">Coming January 2025</p>
         </div>
       </div>
 
-      <div className="mt-8 grid grid-cols-5 gap-6">
-        <figure className="col-span-3">
-          <img src="/projects/dsc.webp" alt="" className="w-full rounded-sm" />
-        </figure>
-        <div className="col-span-2">
-          <p className="text-2xl">Google DSC Landing Page</p>
-          <p className="pt-2 text-dull">
-            Developed and designed a modern landing page for a student org with
-            micro-interactions using React & Framer Motion.
-          </p>
-          <p className="pt-3 text-dull text-sm">
-            Tech: React, TypeScript, Figma, Tailwind.
-          </p>
-          <div className="pt-5 flex gap-2">
-            <a
-              href="https://ufdsc.org/"
-              className="bg-black text-white text-sm rounded-full px-4 py-1.5"
-              target="_blank"
-            >
-              Live Demo
-            </a>
-            <a
-              href="https://github.com/colemmorgan/ufdsc"
-              className="bg-gray-200 text-black text-sm rounded-full px-4 py-1.5"
-              target="_blank"
-            >
-              Source Code
-            </a>
-          </div>
-        </div>
-      </div>
+      {projects.map((project) => (
+        <Project project={project} key={project.title}/>
+      ))}
 
-      <div className="mt-8 grid grid-cols-5 gap-6">
-        <figure className="col-span-3">
-          <img src="/projects/cc.webp" alt="" className="w-full rounded-sm" />
-        </figure>
-        <div className="col-span-2">
-          <p className="text-2xl">Coding Question Platform</p>
-          <p className="pt-2 text-dull">
-            A coding question platform with real time grading and tracking
-            through firebase and containerized code execution.
-          </p>
-          <p className="pt-3 text-dull text-sm">
-            Tech: React, Recoil, Docker, Firebase, Tailwind
-          </p>
-          <div className="pt-5 flex gap-2">
-            <a
-              href="https://code-code-theta.vercel.app/"
-              className="bg-black text-white text-sm rounded-full px-4 py-1.5"
-              target="_blank"
-            >
-              Live Demo
-            </a>
-            <a
-              href="https://github.com/colemmorgan/CodeCode"
-              className="bg-gray-200 text-black text-sm rounded-full px-4 py-1.5"
-              target="_blank"
-            >
-              Source Code
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-8 grid grid-cols-5 gap-6">
-        <figure className="col-span-3">
-          <img
-            src="/projects/fufillment.webp"
-            alt=""
-            className="w-full rounded-sm"
-          />
-        </figure>
-        <div className="col-span-2">
-          <p className="text-2xl">Medical Microcredentialing App</p>
-          <p className="pt-2 text-dull">
-            A fullstack web app that rewards users for expanding their medical
-            knowledege through live trivia, courses, and notecards.
-          </p>
-          <p className="pt-3 text-dull text-sm">
-            Tech: React, Recoil, TypeScript, Firebase.
-          </p>
-          <div className="pt-5 flex gap-2">
-            <a
-              href="https://fufillment-n5cn.vercel.app/"
-              className="bg-black text-white text-sm rounded-full px-4 py-1.5"
-              target="_blank"
-            >
-              Live Demo
-            </a>
-            <a
-              href="https://github.com/colemmorgan/Medihacks2024"
-              className="bg-gray-200 text-black text-sm rounded-full px-4 py-1.5"
-              target="_blank"
-            >
-              Source Code
-            </a>
-          </div>
-        </div>
-      </div>
+      
+   
     </div>
   );
+}
+
+
+type ProjectProps = {
+  project: Project
+}
+
+const Project:React.FC<ProjectProps> = ({project}) => {
+  return (
+    <div className="mt-16 md:mt-8 md:grid grid-cols-5 gap-6">
+    <figure className="col-span-3">
+      <img src={project.src} alt="" className="w-full rounded-sm" />
+    </figure>
+    <div className="col-span-2 pt-5 md:pt-0">
+      <p className="text-lg sm:text-xl lg:text-2xl">{project.title}</p>
+      <p className="pt-1 sm:pt-1.5 text-dull">
+        {project.desc}
+      </p>
+      <p className="pt-1.5 sm:pt-3 text-dull text-sm">
+        Tech: {project.tech.map((tech) => (
+          <span key={tech}>{tech}, </span>
+        ))}
+      </p>
+      <div className="pt-4 flex gap-2">
+        <a
+          href={project.liveLink}
+          className="bg-black text-white text-sm rounded-full px-4 py-1.5"
+          target="_blank"
+        >
+          Live Demo
+        </a>
+        <a
+          href={project.githubLink}
+          className="bg-gray-200 text-black text-sm rounded-full px-4 py-1.5"
+          target="_blank"
+        >
+          Source Code
+        </a>
+      </div>
+    </div>
+  </div>
+  )
 }
