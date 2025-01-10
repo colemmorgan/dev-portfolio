@@ -16,7 +16,7 @@ export default function Hero() {
         </h2>
       </div>
       <a
-        href="mailto:colemmorgann@gmail.com"
+        href="https://www.linkedin.com/in/cole-morgan-/"
         target="_blank"
         rel="noopener noreferrer"
         className="text-sm sm:text-base mt-8 bg-gray-100 border border-gray-300 rounded-full py-2.5 px-8 inline-block font-medium shadow-sm cursor-pointer hover:shadow-md transition-all"
