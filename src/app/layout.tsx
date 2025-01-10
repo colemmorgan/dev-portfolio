@@ -58,8 +58,6 @@ export const metadata: Metadata = {
     title: 'Cole Morgan | Web Developer',
     description: 'Cole Morgan is a frontend-focused full-stack web developer at the University of Florida.',
   },
-  
-  manifest: '/site.webmanifest',
 }
 
 export default function RootLayout({

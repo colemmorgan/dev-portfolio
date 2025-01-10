@@ -47,11 +47,11 @@ export default function Projects() {
           <p className="text-lg sm:text-xl xl:text-2xl">
             Custom Content Management System + Club Website
           </p>
-          <p className="pt-1 md:pt-1.5 text-dull">
+          <p className="pt-1 sm:pt-2.5 text-dull">
             Software and website for the Society of PC Building that
             enables admins to update content on the client-side without code.
           </p>
-          <p className="pt-2.5 text-dull text-sm">
+          <p className="pt-1.5 sm:pt-2 text-dull text-sm">
             Tech: Next.js, TypeScipt, React, Firebase, Tailwind.
           </p>
           <p className="pt-4">Coming January 2025</p>
@@ -81,10 +81,10 @@ const Project:React.FC<ProjectProps> = ({project}) => {
     </figure>
     <div className="col-span-2 pt-5 md:pt-0">
       <p className="text-lg sm:text-xl xl:text-2xl">{project.title}</p>
-      <p className="pt-1 sm:pt-1.5 text-dull">
+      <p className="pt-1 sm:pt-2.5 text-dull">
         {project.desc}
       </p>
-      <p className="pt-1.5 sm:pt-3 text-dull text-sm">
+      <p className="pt-1.5 sm:pt-2 text-dull text-sm">
         Tech: {project.tech.map((tech) => (
           <span key={tech}>{tech}, </span>
         ))}
