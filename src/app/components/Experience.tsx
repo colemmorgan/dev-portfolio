@@ -4,6 +4,17 @@ import React, { useState } from "react";
 
 const experience = [
   {
+    name: "Freelance Web Dev/Design",
+    organization: "Personal",
+    year: "2025",
+    desc: `Worked with clients such as professional soccer coaches and university organizations to deliver custom websites
+    tailored to their needs.  Conducted regular meetings and calls with clients to ensure alignment on project goals, design aesthetics, and
+    functionality.
+    `,
+    tags: ["Frontend", "Freelance", "Next.js", "Design"],
+    href: "spcb",
+  },
+  {
     name: "Software Engineer",
     organization: "Society of PC Building @ UF",
     year: "2024",
@@ -94,7 +105,10 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ exp }) => {
               </div>
               <div className="flex flex-wrap gap-2 pb-6">
                 {exp.tags.map((tag) => (
-                  <span className="text-black bg-gray-200 py-1 px-4 rounded-full text-sm" key={tag}>
+                  <span
+                    className="text-black bg-gray-200 py-1 px-4 rounded-full text-sm"
+                    key={tag}
+                  >
                     {tag}
                   </span>
                 ))}
@@ -107,7 +121,10 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ exp }) => {
 
       {/* Mobile View */}
       <div className="mt-8 sm:hidden">
-        <div onClick={() => setIsOpen((prev) => !prev)} className="cursor-pointer">
+        <div
+          onClick={() => setIsOpen((prev) => !prev)}
+          className="cursor-pointer"
+        >
           <p className="flex justify-between items-end">
             <span>{exp.name}</span>
             <span className="text-dull text-sm">{exp.year}</span>
@@ -133,7 +150,10 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ exp }) => {
               </div>
               <div className="flex flex-wrap gap-2 pb-3">
                 {exp.tags.map((tag) => (
-                  <span className="text-black bg-gray-200 py-1 px-4 rounded-full text-xs" key={tag}>
+                  <span
+                    className="text-black bg-gray-200 py-1 px-4 rounded-full text-xs"
+                    key={tag}
+                  >
                     {tag}
                   </span>
                 ))}
