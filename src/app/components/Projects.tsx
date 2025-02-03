@@ -68,7 +68,7 @@ export default function Projects() {
           <p className="pt-1.5 sm:pt-2 text-dull text-sm">
             Tech: Next.js, TypeScipt, React, Firebase, Tailwind.
           </p>
-          <p className="pt-4">Coming January 2025</p>
+          <p className="pt-4">Coming Febuary 2025</p>
         </div>
       </div>
 
