@@ -52,7 +52,7 @@ export default function Projects() {
       <div className="mt-6 md:grid grid-cols-5 gap-8">
         <figure className="col-span-3">
           <img
-            src="/projects/spcb2.webp"
+            src="/projects/spcb_new.webp"
             alt=""
             className="w-full rounded-sm"
           />
