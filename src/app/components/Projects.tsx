@@ -9,12 +9,12 @@ type Project = {
 
 const projects: Project[] = [
   {
-    src: "/projects/dsc.webp",
-    title: "Google DSC Landing Page",
-    tech: ["React", "TypeScript", "Figma", "Tailwind"],
-    desc: "Developed and designed a modern landing page for a student organization with micro-interactions using React & Framer Motion.",
-    liveLink: "https://ufdsc.org/",
-    githubLink: "https://github.com/colemmorgan/ufdsc",
+    src: "/projects/spcb.webp",
+    title: "Custom Content Management System + Club Website",
+    tech: ["Next.js", "TypeScript","Figma", "Firebase", "Tailwind"],
+    desc: " Software and website for the Society of PC Building that enables admins to update website content without code.",
+    liveLink: "https://www.spcbatuf.org/",
+    githubLink: "https://github.com/PCBuilding/SPCBWebsite",
   },
   {
     src: "/projects/cc.webp",
@@ -24,6 +24,15 @@ const projects: Project[] = [
     liveLink: "https://code-code-theta.vercel.app/",
     githubLink: "https://github.com/colemmorgan/CodeCode",
   },
+  {
+    src: "/projects/dsc.webp",
+    title: "Google DSC Landing Page",
+    tech: ["React", "TypeScript", "Figma", "Tailwind"],
+    desc: "Developed and designed a modern landing page for a student organization with micro-interactions using React & Framer Motion.",
+    liveLink: "https://ufdsc.org/",
+    githubLink: "https://github.com/colemmorgan/ufdsc",
+  },
+
   {
     src: "/projects/fd.webp",
     title: "Professional Coaching Site",
@@ -48,29 +57,6 @@ export default function Projects() {
       id="work"
     >
       <h3 className="text-lg text-dull font-medium tracking-wider">WORK</h3>
-
-      <div className="mt-6 md:grid grid-cols-5 gap-8">
-        <figure className="col-span-3">
-          <img
-            src="/projects/spcb.webp"
-            alt=""
-            className="w-full rounded-sm"
-          />
-        </figure>
-        <div className="col-span-2 pt-5 md:pt-0">
-          <p className="text-lg sm:text-xl xl:text-2xl">
-            Custom Content Management System + Club Website
-          </p>
-          <p className="pt-1 sm:pt-2.5 text-dull">
-            Software and website for the Society of PC Building that enables
-            admins to update content on the client-side without code.
-          </p>
-          <p className="pt-1.5 sm:pt-2 text-dull text-sm">
-            Tech: Next.js, TypeScipt, React, Firebase, Tailwind.
-          </p>
-          <p className="pt-4">Coming Febuary 2025</p>
-        </div>
-      </div>
 
       {projects.map((project) => (
         <Project project={project} key={project.title} />
