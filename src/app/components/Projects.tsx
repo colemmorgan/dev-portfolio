@@ -7,7 +7,17 @@ type Project = {
   githubLink?: string;
 };
 
+
+
 const projects: Project[] = [
+  // {
+  //   src: "/projects/faciligator.webp",
+  //   title: "Custom Content Management System + Club Website",
+  //   tech: ["Next.js", "TypeScript","Figma", "Firebase", "Tailwind"],
+  //   desc: " Software and website for the Society of PC Building that enables admins to update website content without code.",
+  //   liveLink: "https://www.spcbatuf.org/",
+  //   githubLink: "https://github.com/PCBuilding/SPCBWebsite",
+  // },
   {
     src: "/projects/spcb.webp",
     title: "Custom Content Management System + Club Website",
@@ -25,7 +35,22 @@ const projects: Project[] = [
     githubLink: "https://github.com/colemmorgan/CodeCode",
   },
   {
-    src: "/projects/dsc.webp",
+    src: "/projects/fd.webp",
+    title: "Professional Coaching Site",
+    tech: ["Nextjs", "TypeScript", "Figma", "Tailwind"],
+    desc: "Freelance design/development project I created for a client to tell a story about his career and create a personal brand.",
+    liveLink: "https://fionn.pro/",
+  },
+  // {
+  //   src: "/projects/sfg2.webp",
+  //   title: "Student Finance Group",
+  //   tech: ["React", "Recoil", "Docker", "Firebase", "Tailwind"],
+  //   desc: "A coding question platform with real-time grading and tracking through Firebase and containerized code execution.",
+  //   liveLink: "https://code-code-theta.vercel.app/",
+  //   githubLink: "https://github.com/colemmorgan/CodeCode",
+  // },
+  {
+    src: "/projects/dsc2.webp",
     title: "Google DSC Landing Page",
     tech: ["React", "TypeScript", "Figma", "Tailwind"],
     desc: "Developed and designed a modern landing page for a student organization with micro-interactions using React & Framer Motion.",
@@ -33,13 +58,7 @@ const projects: Project[] = [
     githubLink: "https://github.com/colemmorgan/ufdsc",
   },
 
-  {
-    src: "/projects/fd.webp",
-    title: "Professional Coaching Site",
-    tech: ["Nextjs", "TypeScript", "Figma", "Tailwind"],
-    desc: "Freelance design/development project I created for a client to tell a story about his career and create a personal brand.",
-    liveLink: "https://fionn.pro/",
-  },
+ 
   {
     src: "/projects/fufillment.webp",
     title: "Medical Microcredentialing App",
