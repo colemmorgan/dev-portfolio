@@ -11,6 +11,16 @@ type Project = {
 
 const projects: Project[] = [
 
+  
+  // {
+  //   src: "/projects/faciligator.webp",
+  //   title: "Custom Content Management System + Club Website",
+  //   tech: ["Next.js", "TypeScript","Figma", "Firebase", "Tailwind"],
+  //   desc: " Software and website for the Society of PC Building that enables admins to update website content without code.",
+  //   liveLink: "https://www.spcbatuf.org/",
+  //   githubLink: "https://github.com/PCBuilding/SPCBWebsite",
+  // },
+
   {
     src: "/projects/spcb.webp",
     title: "Custom Content Management System + Club Website",
