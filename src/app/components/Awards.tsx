@@ -10,6 +10,11 @@ type award = {
 
 const awards: award[] = [
   {
+    desc: `SwamphacksX "Best Use of Auth0"`,
+    year: "2025",
+    href: "https://devpost.com/software/prometheus-rh7oxz",
+  },
+  {
     desc: "MediHacks 2024 Hackathon Winner",
     year: "2024",
     href: "https://devpost.com/software/fulfillment",

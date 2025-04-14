@@ -3,15 +3,20 @@ type Project = {
   title: string;
   desc: string;
   tech: string[];
-  liveLink: string;
+  liveLink?: string;
   githubLink?: string;
 };
 
-
-
 const projects: Project[] = [
+  {
+    src: "/projects/spcb.webp",
+    title: "Custom Content Management System + Club Website",
+    tech: ["Next.js", "TypeScript", "Figma", "Firebase", "Tailwind"],
+    desc: " Software and website for the Society of PC Building that enables admins to update website content without code.",
+    liveLink: "https://www.spcbatuf.org/",
+    githubLink: "https://github.com/PCBuilding/SPCBWebsite",
+  },
 
-  
   // {
   //   src: "/projects/faciligator.webp",
   //   title: "Custom Content Management System + Club Website",
@@ -20,22 +25,20 @@ const projects: Project[] = [
   //   liveLink: "https://www.spcbatuf.org/",
   //   githubLink: "https://github.com/PCBuilding/SPCBWebsite",
   // },
-
-  {
-    src: "/projects/spcb.webp",
-    title: "Custom Content Management System + Club Website",
-    tech: ["Next.js", "TypeScript","Figma", "Firebase", "Tailwind"],
-    desc: " Software and website for the Society of PC Building that enables admins to update website content without code.",
-    liveLink: "https://www.spcbatuf.org/",
-    githubLink: "https://github.com/PCBuilding/SPCBWebsite",
-  },
   {
     src: "/projects/fd.webp",
     title: "Professional Coaching Site",
     tech: ["Nextjs", "TypeScript", "Figma", "Tailwind"],
     desc: "Freelance design/development project I created for a client to tell a story about his career and create a personal brand.",
     liveLink: "https://fionn.pro/",
-  }, 
+  },
+  {
+    src: "/projects/prometheus.webp",
+    title: "AI Wildfire Alert System",
+    tech: ["React", "TypeScript", "Figma", "Python", "FastAPI"],
+    desc: "Monitor live national park cameras or upload your own cameras and recieve instant call alerts if fire is detected.",
+    githubLink: "https://github.com/kgand/prometheus",
+  },
   {
     src: "/projects/cc.webp",
     title: "Coding Question Platform",
@@ -53,7 +56,6 @@ const projects: Project[] = [
     githubLink: "https://github.com/colemmorgan/ufdsc",
   },
 
- 
   {
     src: "/projects/fufillment.webp",
     title: "Medical Microcredentialing App",
@@ -99,17 +101,19 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
           ))}
         </p>
         <div className="pt-4 flex gap-2">
-          <a
-            href={project.liveLink}
-            className="bg-black text-white text-sm rounded-full px-4 py-1.5 hover:bg-[#404040] transition-all"
-            target="_blank"
-          >
-            Live Demo
-          </a>
+          {project.liveLink && (
+            <a
+              href={project.liveLink}
+              className="bg-black text-white text-sm rounded-full px-4 py-1.5 hover:bg-[#404040] transition-all"
+              target="_blank"
+            >
+              Live Demo
+            </a>
+          )}
           {project.githubLink && (
             <a
               href={project.githubLink}
-              className="bg-gray-200 text-black text-sm rounded-full px-4 py-1.5 hover:bg-gray-300"
+              className="bg-gray-200 text-black text-sm rounded-full px-4 py-1.5 hover:bg-gray-300 transition-all"
               target="_blank"
             >
               Source Code
